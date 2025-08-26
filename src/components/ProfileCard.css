@@ -1,0 +1,87 @@
+.pc-card-wrapper {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.pc-card {
+  position: relative;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pc-card:hover {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.pc-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  box-shadow: 0 0 25px rgba(255,255,255,0.6);
+}
+
+.pc-details {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.pc-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.pc-details p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.pc-handle {
+  color: #00ffff;
+}
+
+.pc-status {
+  color: #7fff00;
+  font-weight: 500;
+}
+
+.pc-contact-btn {
+  background: linear-gradient(90deg, #4ade80, #06b6d4);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pc-contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}

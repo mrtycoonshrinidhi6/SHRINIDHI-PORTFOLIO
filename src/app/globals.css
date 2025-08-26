@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+--bg: #08080c;
+--muted: #a6a8ad;
+}
+
+
+html, body, #__next { height: 100%; }
+
+
+body { @apply bg-[var(--bg)] text-white antialiased; }
+
+
+.section { @apply relative py-24 md:py-28; }
+.container { @apply mx-auto max-w-6xl px-6; }
+
+
+.gradient-text {
+background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+/* Glow cards */
+.card {
+@apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md transition-transform duration-300 ease-out;
+}
+.card:hover { transform: translateY(-4px) scale(1.01); box-shadow: 0 0 40px rgba(99,102,241,0.25), inset 0 0 0 1px rgba(255,255,255,0.06); }
+
+
+/* ProfileCard */
+.pc-card-wrapper { position: relative; --card-opacity: 0.35; }
+.pc-card { position: relative; border-radius: 28px; overflow: hidden; background: var(--inner-gradient); transform: perspective(1200px) rotateX(var(--rotate-y, 0)) rotateY(var(--rotate-x, 0)); transition: transform .2s ease-out; }
+.pc-card.active { transition: none; }
+.pc-inside { position: relative; padding: 1rem; isolation: isolate; }
+.pc-shine { position: absolute; inset: -40%; background: var(--behind-gradient); filter: blur(40px); opacity: 0.7; z-index: 0; }
+.pc-glare { position: absolute; inset: 0; background: radial-gradient(60% 60% at var(--pointer-x) var(--pointer-y), rgba(255,255,255,0.35), transparent 60%); mix-blend-mode: overlay; opacity: .6; z-index: 0; }
+.pc-content { position: relative; z-index: 1; }
+.pc-avatar-content { display:flex; align-items:center; gap:1rem; }
+.pc-details h3 { @apply text-xl font-semibold; }
+.pc-details p { @apply text-sm text-white/80; }
+.pc-user-info { display:flex; align-items:center; gap:.75rem; margin-left:auto; }
+.pc-mini-avatar img { width:28px; height:28px; border-radius:9999px; border:2px solid rgba(255,255,255,.35); }
+.pc-contact-btn { @apply px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 transition; }
+.avatar { width:88px; height:88px; border-radius:18px; object-fit:cover; border:1px solid rgba(255,255,255,.1); }
+
+
+/* Orb */
+.orb-container { width: 100%; height: 600px; position: relative; }
+
+
+/* Navbar avatar */
+.nav-avatar { width: 36px; height: 36px; object-fit: cover; border-radius: 9999px; border:2px solid rgba(255,255,255,.5); }
+
+
+/* ScrollStack */
+.scroll-stack-card { background: radial-gradient(80% 100% at 50% 0%, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.08); }
+
+/* globals.css */
+.clip-triangle {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
